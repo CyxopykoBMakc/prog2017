@@ -1,0 +1,140 @@
+namespace BinarySearch
+{
+    class Program
+    {
+        public static int BinarySearch(int[] Array, int value)
+        {
+            if (Array == null)
+            {
+                return 0;
+            }
+
+            if ((Array.Length == 0) || (value < Array[0]) || (value > Array[Array.Length - 1]))
+            {
+                return 0;
+            }
+
+            int first = 0;
+            int last = Array.Length;
+
+            while (first < last)
+            {
+                int middle = (first + last) / 2;
+
+                if (value <= Array[middle])
+                {
+                    last = middle;
+                }
+
+                else
+                {
+                    first = middle + 1;
+                }
+            }
+
+            if (Array[last] == value)
+            {
+                return last;
+            }
+
+            else
+            {
+                return 0;
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            TestoviyNegativniyNomer();
+            TestoviyNonBeElement();
+            TestoviyRetryNomer();
+            TestoviyVoid();
+            TestoviyBigArray();
+            Console.BlackKey();
+        }
+
+        private static void TestoviyNegativniyNomer()
+        {
+            int[] negativeNumbers = new[] { -5, -4, -3, -2 };
+            if (BinarySearch(negativeNumbers, -3) != 2)
+            {
+                Console.WriteLine("! Поиск не нашёл число -3 среди чисел {-5, -4, -3, -2}");
+            }
+
+            else
+            {
+                Console.WriteLine("Поиск среди отрицательных чисел работает корректно");
+            }
+        }
+        private static void TestoviyNonBeElement()
+        {
+            int[] negativeNumbers = new[] { -5, -4, -3, -2 };
+            if (BinarySearch(negativeNumbers, -1) >= 0)
+            {
+                Console.WriteLine("Поиск нашёл число -1 среди чисел {-5, -4, -3, -2}");
+            }
+
+            else
+            {
+                Console.WriteLine("Поиск отсутствующего элемента вернул корректный результат работает корректно");
+            }
+        }
+
+        private static void TestoviyRetryNomer()
+        { 
+            int[] RepeatingNumber = new[] { 47, 47, 47, 47, 47};
+            if (BinarySearch(RepeatingNumber, 47) != 0)
+            {
+                Console.WriteLine("В масиве нет элемента 47.");
+            }
+
+            else
+            {
+                Console.WriteLine("Поиск повторяющегося элемента вернул корректный резуоьтат.");
+            }
+        }
+
+        private static void TestoviyVoid()
+        { 
+            int[] Numbers = new int[0];
+            if (BinarySearch(Numbers, 0) != -1)
+            {
+                Console.WriteLine("В массиве есть элементы.");
+            }
+
+            else
+            {
+                Console.WriteLine("Поиск на пустой массив вернул корректный результат.");
+            }
+        }
+
+        private static void TestoviyBigArray()
+        {
+            int[] BigArray = new int[100001];
+            for (int i = 0; i < 100001; i++)
+            {
+                BigArray[i] = i;
+            }
+
+            bool error = false;
+
+            for (int i = 0; i < 100001; i++)
+            {
+                if (BinarySearch(BigArray, i) != i)
+                {
+                    Console.WriteLine("В массиве из 100001 элемента найден элемент.");
+                }
+
+                else
+                {
+                    error = true;
+                }
+            }
+
+            if (error)
+            {
+                Console.WriteLine("Поиск в массиве из 100001 элемента возратил корректный результат.");
+            }
+        }
+    }
+}
