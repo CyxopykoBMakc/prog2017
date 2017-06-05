@@ -1,4 +1,4 @@
-namespace BinarySearch
+п»їnamespace BinarySearch
 {
     class Program
     {
@@ -58,12 +58,12 @@ namespace BinarySearch
             int[] negativeNumbers = new[] { -5, -4, -3, -2 };
             if (BinarySearch(negativeNumbers, -3) != 2)
             {
-                Console.WriteLine("! Поиск не нашёл число -3 среди чисел {-5, -4, -3, -2}");
+                Console.WriteLine("! РџРѕРёСЃРє РЅРµ РЅР°С€С‘Р» С‡РёСЃР»Рѕ -3 СЃСЂРµРґРё С‡РёСЃРµР» {-5, -4, -3, -2}");
             }
 
             else
             {
-                Console.WriteLine("Поиск среди отрицательных чисел работает корректно");
+                Console.WriteLine("РџРѕРёСЃРє СЃСЂРµРґРё РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹С… С‡РёСЃРµР» СЂР°Р±РѕС‚Р°РµС‚ РєРѕСЂСЂРµРєС‚РЅРѕ");
             }
         }
         private static void TestoviyNonBeElement()
@@ -71,12 +71,12 @@ namespace BinarySearch
             int[] negativeNumbers = new[] { -5, -4, -3, -2 };
             if (BinarySearch(negativeNumbers, -1) >= 0)
             {
-                Console.WriteLine("Поиск нашёл число -1 среди чисел {-5, -4, -3, -2}");
+                Console.WriteLine("РџРѕРёСЃРє РЅР°С€С‘Р» С‡РёСЃР»Рѕ -1 СЃСЂРµРґРё С‡РёСЃРµР» {-5, -4, -3, -2}");
             }
 
             else
             {
-                Console.WriteLine("Поиск отсутствующего элемента вернул корректный результат работает корректно");
+                Console.WriteLine("РџРѕРёСЃРє РѕС‚СЃСѓС‚СЃС‚РІСѓСЋС‰РµРіРѕ СЌР»РµРјРµРЅС‚Р° РІРµСЂРЅСѓР» РєРѕСЂСЂРµРєС‚РЅС‹Р№ СЂРµР·СѓР»СЊС‚Р°С‚ СЂР°Р±РѕС‚Р°РµС‚ РєРѕСЂСЂРµРєС‚РЅРѕ");
             }
         }
 
@@ -85,12 +85,12 @@ namespace BinarySearch
             int[] RepeatingNumber = new[] { 47, 47, 47, 47, 47};
             if (BinarySearch(RepeatingNumber, 47) != 0)
             {
-                Console.WriteLine("В масиве нет элемента 47.");
+                Console.WriteLine("Р’ РјР°СЃРёРІРµ РЅРµС‚ СЌР»РµРјРµРЅС‚Р° 47.");
             }
 
             else
             {
-                Console.WriteLine("Поиск повторяющегося элемента вернул корректный резуоьтат.");
+                Console.WriteLine("РџРѕРёСЃРє РїРѕРІС‚РѕСЂСЏСЋС‰РµРіРѕСЃСЏ СЌР»РµРјРµРЅС‚Р° РІРµСЂРЅСѓР» РєРѕСЂСЂРµРєС‚РЅС‹Р№ СЂРµР·СѓРѕСЊС‚Р°С‚.");
             }
         }
 
@@ -99,12 +99,12 @@ namespace BinarySearch
             int[] Numbers = new int[0];
             if (BinarySearch(Numbers, 0) != -1)
             {
-                Console.WriteLine("В массиве есть элементы.");
+                Console.WriteLine("Р’ РјР°СЃСЃРёРІРµ РµСЃС‚СЊ СЌР»РµРјРµРЅС‚С‹.");
             }
 
             else
             {
-                Console.WriteLine("Поиск на пустой массив вернул корректный результат.");
+                Console.WriteLine("РџРѕРёСЃРє РЅР° РїСѓСЃС‚РѕР№ РјР°СЃСЃРёРІ РІРµСЂРЅСѓР» РєРѕСЂСЂРµРєС‚РЅС‹Р№ СЂРµР·СѓР»СЊС‚Р°С‚.");
             }
         }
 
@@ -122,7 +122,7 @@ namespace BinarySearch
             {
                 if (BinarySearch(BigArray, i) != i)
                 {
-                    Console.WriteLine("В массиве из 100001 элемента найден элемент.");
+                    Console.WriteLine("Р’ РјР°СЃСЃРёРІРµ РёР· 100001 СЌР»РµРјРµРЅС‚Р° РЅР°Р№РґРµРЅ СЌР»РµРјРµРЅС‚.");
                 }
 
                 else
@@ -133,7 +133,7 @@ namespace BinarySearch
 
             if (error)
             {
-                Console.WriteLine("Поиск в массиве из 100001 элемента возратил корректный результат.");
+                Console.WriteLine("РџРѕРёСЃРє РІ РјР°СЃСЃРёРІРµ РёР· 100001 СЌР»РµРјРµРЅС‚Р° РІРѕР·СЂР°С‚РёР» РєРѕСЂСЂРµРєС‚РЅС‹Р№ СЂРµР·СѓР»СЊС‚Р°С‚.");
             }
         }
     }
